@@ -4,13 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Panier | Le Panier du Coin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="container cart-page">
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-truck"></i> Le facteur passe demain ! Commandez avant 19h pour votre village.</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="contact.html">Besoin d'aide ?</a>
+                <a href="concept.html">Notre démarche solidaire</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="Logo Le Panier du Coin">
+                <span class="brand-name">Le Panier du Coin</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit frais, un artisan...">
+                <button type="button" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='famille.html'">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <div class="action-text">
+                        <span>Compte Famille</span>
+                        <strong>Aider un proche</strong>
+                    </div>
+                </button>
+                <button class="action-btn cart-btn" onclick="window.location.href='panier.html'" style="background-color: var(--primary); color: white;">
+                    <div class="cart-icon-wrapper">
+                        <i class="fa-solid fa-basket-shopping" style="color: white;"></i>
+                        <span class="cart-badge" style="background-color: white; color: var(--primary);">0</span>
+                    </div>
+                    <div class="action-text">
+                        <span style="color: rgba(255,255,255,0.8);">Mon Panier</span>
+                        <strong style="color: white;">0,00 €</strong>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container nav-links">
+            <button class="all-categories-btn" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-bars"></i> Tous les rayons</button>
+            <a href="boutique.html">🥖 Boulangerie</a>
+            <a href="boutique.html">🥩 Boucherie & Charcuterie</a>
+            <a href="boutique.html">🥬 Primeur</a>
+            <a href="boutique.html">🧀 Crèmerie</a>
+            <a href="boutique.html">🍯 Épicerie</a>
+            <a href="concept.html" class="highlight-link"><i class="fa-solid fa-users"></i> Nos Artisans</a>
+        </div>
+    </nav>
+
+    <main class="container cart-page" style="min-height: 50vh;">
         <h1 class="page-title">Votre Panier Mutualisé</h1>
         
         <div class="cart-layout">
@@ -18,26 +76,74 @@
                 </div>
 
             <div class="cart-summary">
-                <h3>Résumé de la commande</h3>
+                <h3 style="font-size: 1.2rem; margin-bottom: 25px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">Résumé de la commande</h3>
+                
                 <div class="summary-line">
-                    <span>Sous-total</span>
-                    <span id="cart-subtotal">0,00 €</span>
+                    <span style="color: var(--text-muted);">Sous-total artisans</span>
+                    <span id="cart-subtotal" style="font-weight: 600;">0,00 €</span>
                 </div>
+                
                 <div class="summary-line">
-                    <span>Livraison (Tournée du village)</span>
-                    <span>2,50 €</span>
+                    <span style="color: var(--text-muted);">Frais de tournée (Mutualisés)</span>
+                    <span style="font-weight: 600;">2,50 €</span>
                 </div>
-                <div class="summary-line total">
-                    <span>Total</span>
+                
+                <div class="summary-line total" style="margin-top: 20px;">
+                    <span>Total à régler</span>
                     <span id="cart-total-final">0,00 €</span>
                 </div>
-                <button class="btn-primary checkout-btn" onclick="alert('Redirection vers le paiement sécurisé...')">Valider ma commande</button>
-                <div class="reassurance-cart">
-                    <i class="fa-solid fa-leaf"></i> Vos produits seront livrés dans des contenants consignés.
+                
+                <button class="btn-primary checkout-btn" onclick="alert('Redirection vers la page de paiement sécurisé...')">
+                    <i class="fa-solid fa-lock" style="margin-right: 8px;"></i> Valider ma commande
+                </button>
+                
+                <div style="margin-top: 25px; padding: 15px; background: rgba(44, 94, 79, 0.05); border-radius: 8px; font-size: 0.85rem; color: var(--primary);">
+                    <p style="margin-bottom: 10px;"><i class="fa-solid fa-leaf" style="margin-right: 8px;"></i> <strong>Zéro Déchet</strong> : Vos produits seront livrés dans des contenants consignés réutilisables.</p>
+                    <p><i class="fa-regular fa-comments" style="margin-right: 8px;"></i> <strong>Lien Social</strong> : Notre livreur prendra le temps d'échanger lors de son passage.</p>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="logo.png" alt="Logo Le Panier du Coin" class="footer-logo">
+                <p>Bien manger, bien entouré. Vos artisans locaux livrés chez vous.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Nos Rayons</h4>
+                <ul>
+                    <li><a href="boutique.html">Boulangerie</a></li>
+                    <li><a href="boutique.html">Boucherie</a></li>
+                    <li><a href="boutique.html">Fruits & Légumes</a></li>
+                    <li><a href="boutique.html">Épicerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Le Service</h4>
+                <ul>
+                    <li><a href="famille.html">L'Espace Famille</a></li>
+                    <li><a href="concept.html">Notre démarche</a></li>
+                    <li><a href="concept.html">Zéro Déchet</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Aide & Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                    <li><a href="#">CGV & Mentions légales</a></li>
+                    <div class="payment-methods" style="margin-top: 15px; font-size: 1.5rem; display: flex; gap: 10px;">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
+            &copy; 2026 Le Panier du Coin. Fait avec passion pour nos villages.
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
