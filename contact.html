@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Aide | Le Panier du Coin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-truck"></i> Le facteur passe demain ! Commandez avant 19h pour votre village.</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="contact.html" style="color: var(--white); font-weight: 600;">Besoin d'aide ?</a>
+                <a href="concept.html">Notre démarche solidaire</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="Logo Le Panier du Coin">
+                <span class="brand-name">Le Panier du Coin</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit frais, un artisan...">
+                <button type="button" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='famille.html'">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <div class="action-text">
+                        <span>Compte Famille</span>
+                        <strong>Aider un proche</strong>
+                    </div>
+                </button>
+                <button class="action-btn cart-btn" onclick="window.location.href='panier.html'">
+                    <div class="cart-icon-wrapper">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="cart-badge">0</span>
+                    </div>
+                    <div class="action-text">
+                        <span>Mon Panier</span>
+                        <strong>0,00 €</strong>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container nav-links">
+            <button class="all-categories-btn" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-bars"></i> Tous les rayons</button>
+            <a href="boutique.html">🥖 Boulangerie</a>
+            <a href="boutique.html">🥩 Boucherie & Charcuterie</a>
+            <a href="boutique.html">🥬 Primeur</a>
+            <a href="boutique.html">🧀 Crèmerie</a>
+            <a href="boutique.html">🍯 Épicerie</a>
+            <a href="concept.html" class="highlight-link"><i class="fa-solid fa-users"></i> Nos Artisans</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-banner container" style="background-image: linear-gradient(rgba(44, 94, 79, 0.8), rgba(44, 94, 79, 0.7)), url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1600&auto=format&fit=crop'); min-height: 350px; display: flex; align-items: center; justify-content: center; text-align: center;">
+            <div class="banner-content" style="max-width: 700px; margin: 0 auto;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Comment pouvons-nous<br>vous aider ?</h1>
+                <p style="font-size: 1.1rem; margin-bottom: 0;">Une question sur une livraison, un artisan ou l'Espace Famille ? Notre équipe locale est à votre entière disposition.</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 60px 0; display: flex; flex-wrap: wrap; gap: 60px;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 30px;">Discutons ensemble</h2>
+                
+                <div style="margin-bottom: 30px; display: flex; align-items: flex-start; gap: 20px;">
+                    <div style="background: rgba(214, 138, 94, 0.1); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--secondary);">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <strong style="display: block; font-size: 1.1rem; color: var(--text-main); margin-bottom: 5px;">Par téléphone</strong>
+                        <span style="color: var(--text-muted); font-size: 0.95rem;">Du lundi au vendredi, de 9h à 18h.</span>
+                        <a href="tel:+33478000000" style="display: block; margin-top: 5px; font-weight: 700; color: var(--primary); font-size: 1.2rem;">04 78 00 00 00</a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 30px; display: flex; align-items: flex-start; gap: 20px;">
+                    <div style="background: rgba(214, 138, 94, 0.1); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--secondary);">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div>
+                        <strong style="display: block; font-size: 1.1rem; color: var(--text-main); margin-bottom: 5px;">Par courriel</strong>
+                        <span style="color: var(--text-muted); font-size: 0.95rem;">Nous répondons sous 24h ouvrées.</span>
+                        <a href="mailto:bonjour@lepanierducoin.fr" style="display: block; margin-top: 5px; font-weight: 600; color: var(--primary);">bonjour@lepanierducoin.fr</a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 30px; display: flex; align-items: flex-start; gap: 20px;">
+                    <div style="background: rgba(214, 138, 94, 0.1); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--secondary);">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <strong style="display: block; font-size: 1.1rem; color: var(--text-main); margin-bottom: 5px;">Nos bureaux</strong>
+                        <span style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;">12 Place de la Mairie<br>69380 Chazay-d'Azergues<br>Auvergne-Rhône-Alpes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="flex: 1.5; min-width: 350px; background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 25px;">Envoyez-nous un message</h3>
+                <form onsubmit="event.preventDefault(); alert('Merci ! Votre message a bien été envoyé. Notre équipe vous répondra très vite.');">
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+                        <div style="flex: 1;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-main); font-size: 0.9rem;">Prénom</label>
+                            <input type="text" required placeholder="Jean" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; outline: none;">
+                        </div>
+                        <div style="flex: 1;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-main); font-size: 0.9rem;">Nom</label>
+                            <input type="text" required placeholder="Dupont" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; outline: none;">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-main); font-size: 0.9rem;">Adresse e-mail</label>
+                        <input type="email" required placeholder="jean.dupont@exemple.com" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; outline: none;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-main); font-size: 0.9rem;">Sujet</label>
+                        <select style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; outline: none; background: white; cursor: pointer;">
+                            <option>Question sur une commande</option>
+                            <option>Information sur l'Espace Famille</option>
+                            <option>Devenir artisan partenaire</option>
+                            <option>Problème technique</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-main); font-size: 0.9rem;">Message</label>
+                        <textarea required placeholder="Comment pouvons-nous vous aider ?" rows="5" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; outline: none; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%; font-size: 1.1rem;"><i class="fa-regular fa-paper-plane" style="margin-right: 8px;"></i> Envoyer mon message</button>
+                </form>
+            </div>
+        </section>
+
+        <section style="background-color: var(--bg-light); padding: 80px 0; margin-bottom: -80px;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                    <h2 style="font-size: 2.5rem; color: var(--primary);">Questions fréquentes</h2>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+                    
+                    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <h4 style="font-family: var(--font-ui); font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 10px;"><i class="fa-solid fa-q" style="color: var(--secondary); margin-right: 8px;"></i> Livrez-vous dans mon village ?</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Nous étendons notre réseau de tournées chaque mois. Lors de la création de votre compte, il vous suffit d'entrer le code postal de livraison. Si nous ne desservons pas encore la zone, vous serez placé sur liste d'attente prioritaire.</p>
+                    </div>
+
+                    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <h4 style="font-family: var(--font-ui); font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 10px;"><i class="fa-solid fa-q" style="color: var(--secondary); margin-right: 8px;"></i> Comment rendre les emballages consignés ?</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">C'est très simple ! Gardez les sacs en tissu, les boîtes à œufs et les glacières propres chez vous. Lors de la tournée suivante, notre livreur les récupérera en vous apportant vos nouvelles courses.</p>
+                    </div>
+
+                    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                        <h4 style="font-family: var(--font-ui); font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 10px;"><i class="fa-solid fa-q" style="color: var(--secondary); margin-right: 8px;"></i> Puis-je modifier une commande via l'Espace Famille ?</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Toute commande peut être modifiée ou annulée sans frais jusqu'à 19h la veille de la livraison, heure à laquelle nous transmettons les listes de préparation exactes à nos artisans partenaires.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="logo.png" alt="Logo Le Panier du Coin" class="footer-logo">
+                <p>Bien manger, bien entouré. Vos artisans locaux livrés chez vous.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Nos Rayons</h4>
+                <ul>
+                    <li><a href="boutique.html">Boulangerie</a></li>
+                    <li><a href="boutique.html">Boucherie</a></li>
+                    <li><a href="boutique.html">Fruits & Légumes</a></li>
+                    <li><a href="boutique.html">Épicerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Le Service</h4>
+                <ul>
+                    <li><a href="famille.html">L'Espace Famille</a></li>
+                    <li><a href="concept.html">Notre démarche</a></li>
+                    <li><a href="concept.html">Zéro Déchet</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Aide & Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                    <li><a href="#">CGV & Mentions légales</a></li>
+                    <div class="payment-methods" style="margin-top: 15px; font-size: 1.5rem; display: flex; gap: 10px;">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
+            &copy; 2026 Le Panier du Coin. Fait avec passion pour nos villages.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
