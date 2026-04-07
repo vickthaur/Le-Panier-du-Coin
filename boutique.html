@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Boutique | Le Panier du Coin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container page-layout">
+        <aside class="sidebar-filters">
+            <h3>Nos Rayons</h3>
+            <ul class="filter-list">
+                <li><a href="#" class="active">Tous les produits</a></li>
+                <li><a href="#">🥖 Boulangerie</a></li>
+                <li><a href="#">🥩 Boucherie</a></li>
+                <li><a href="#">🥬 Primeur</a></li>
+                <li><a href="#">🧀 Crèmerie</a></li>
+            </ul>
+        </aside>
+
+        <section class="products-section full-width">
+            <div class="section-header">
+                <h2>Tous les produits de vos artisans</h2>
+            </div>
+            <div class="products-grid">
+                
+                <article class="product-card" data-id="1" data-name="Pain de Campagne Bio" data-price="3.20" data-img="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80">
+                    <div class="product-badge">Local</div>
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80" alt="Pain"></div>
+                    <div class="product-details">
+                        <span class="artisan-name">Maison Moulin</span>
+                        <h3 class="product-title">Pain de Campagne Bio</h3>
+                        <span class="product-weight">500g</span>
+                        <div class="product-bottom">
+                            <span class="product-price">3,20 €</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="2" data-name="Steak haché pur bœuf (x2)" data-price="6.50" data-img="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80">
+                    <div class="product-badge">Circuit-court</div>
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80" alt="Viande"></div>
+                    <div class="product-details">
+                        <span class="artisan-name">Boucherie Jean</span>
+                        <h3 class="product-title">Steak haché pur bœuf (x2)</h3>
+                        <span class="product-weight">300g</span>
+                        <div class="product-bottom">
+                            <span class="product-price">6,50 €</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="3" data-name="Tomates grappes" data-price="4.50" data-img="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80">
+                    <div class="product-badge bio">Bio</div>
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80" alt="Tomates"></div>
+                    <div class="product-details">
+                        <span class="artisan-name">Ferme des Lilas</span>
+                        <h3 class="product-title">Tomates grappes de saison</h3>
+                        <span class="product-weight">1kg</span>
+                        <div class="product-bottom">
+                            <span class="product-price">4,50 €</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="4" data-name="Fromage de Chèvre Fermier" data-price="5.20" data-img="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&q=80">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&q=80" alt="Fromage"></div>
+                    <div class="product-details">
+                        <span class="artisan-name">Laiterie du Bourg</span>
+                        <h3 class="product-title">Fromage de Chèvre Cendré</h3>
+                        <span class="product-weight">Pièce de 200g</span>
+                        <div class="product-bottom">
+                            <span class="product-price">5,20 €</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
