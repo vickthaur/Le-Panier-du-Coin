@@ -6,6 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartBadge = document.querySelector('.cart-badge');
     const cartPriceDisplay = document.querySelector('.cart-btn .action-text strong');
 
+    // Création dynamique de la notification (Toast)
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+
+    function showToast(message) {
+        toast.innerHTML = `<i class="fa-solid fa-check-circle" style="margin-right: 8px;"></i> ${message}`;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+
     // Mettre à jour l'en-tête (Badge et Prix Total)
     function updateHeaderCart() {
         let count = 0;
@@ -53,7 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             saveCart();
 
-            // Animation visuelle
+            // Afficher la notification Toast
+            showToast(`<b>${name}</b> ajouté au panier !`);
+
+            // Animation visuelle du bouton
             const originalHtml = button.innerHTML;
             button.innerHTML = '<i class="fa-solid fa-check"></i>';
             button.style.backgroundColor = 'var(--primary)';
@@ -76,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (cart.length === 0) {
             cartContainer.innerHTML = `
-                <div class="empty-cart">
+                <div class="empty-cart" style="text-align: center; padding: 50px; color: var(--text-muted); background: white; border-radius: 12px; border: 1px dashed var(--border-color);">
                     <i class="fa-solid fa-basket-shopping" style="font-size: 3rem; margin-bottom: 15px; color: #ccc;"></i><br>
                     Votre panier unique est vide.<br>
                     <a href="boutique.html" class="btn-primary" style="margin-top:20px;">Remplir mon panier</a>
@@ -92,17 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.forEach((item, index) => {
             subtotal += item.price * item.qty;
             const itemHTML = `
-                <div class="cart-item">
-                    <div class="cart-item-info">
-                        <img src="${item.img}" alt="${item.name}">
+                <div class="cart-item" style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background: white; border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 15px;">
+                    <div class="cart-item-info" style="display: flex; align-items: center; gap: 20px;">
+                        <img src="${item.img}" alt="${item.name}" style="width: 80px; height: 80px; border-radius: 8px; object-fit: cover;">
                         <div>
-                            <h4>${item.name}</h4>
+                            <h4 style="margin-bottom: 5px; color: var(--text-main); font-size: 1.1rem;">${item.name}</h4>
                             <span style="color: var(--text-muted); font-size:0.85rem;">Quantité : ${item.qty}</span>
                         </div>
                     </div>
                     <div style="display:flex; align-items:center; gap:30px;">
-                        <span class="cart-item-price">${(item.price * item.qty).toFixed(2).replace('.', ',')} €</span>
-                        <button class="btn-remove" onclick="removeItem(${index})"><i class="fa-solid fa-trash"></i></button>
+                        <span class="cart-item-price" style="font-weight: bold; color: var(--primary); font-size: 1.2rem;">${(item.price * item.qty).toFixed(2).replace('.', ',')} €</span>
+                        <button class="btn-remove" onclick="removeItem(${index})" style="color: #e74c3c; font-size: 1.2rem; cursor: pointer; background: none; border: none;"><i class="fa-solid fa-trash"></i></button>
                     </div>
                 </div>
             `;
@@ -117,16 +133,25 @@ document.addEventListener('DOMContentLoaded', () => {
     window.removeItem = function(index) {
         cart.splice(index, 1);
         saveCart();
+        showToast("Produit retiré du panier");
     };
 
     // Lancer l'affichage si on est sur panier.html
     renderCartPage();
 
-    // 4. Redirection des boutons (Lier les pages entre elles)
-    const cartButton = document.querySelector('.cart-btn');
-    if(cartButton) {
-        cartButton.addEventListener('click', () => {
-            window.location.href = 'panier.html';
+    // 4. ANIMATION AU SCROLL (En-tête collant)
+    const header = document.querySelector('.main-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.style.position = 'sticky';
+                header.style.top = '0';
+                header.style.boxShadow = 'var(--shadow-sm)';
+                header.style.zIndex = '1000';
+            } else {
+                header.style.position = 'relative';
+                header.style.boxShadow = 'none';
+            }
         });
     }
 });
