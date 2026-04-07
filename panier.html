@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Panier | Le Panier du Coin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container cart-page">
+        <h1 class="page-title">Votre Panier Mutualisé</h1>
+        
+        <div class="cart-layout">
+            <div class="cart-items" id="cart-container">
+                </div>
+
+            <div class="cart-summary">
+                <h3>Résumé de la commande</h3>
+                <div class="summary-line">
+                    <span>Sous-total</span>
+                    <span id="cart-subtotal">0,00 €</span>
+                </div>
+                <div class="summary-line">
+                    <span>Livraison (Tournée du village)</span>
+                    <span>2,50 €</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span id="cart-total-final">0,00 €</span>
+                </div>
+                <button class="btn-primary checkout-btn" onclick="alert('Redirection vers le paiement sécurisé...')">Valider ma commande</button>
+                <div class="reassurance-cart">
+                    <i class="fa-solid fa-leaf"></i> Vos produits seront livrés dans des contenants consignés.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
