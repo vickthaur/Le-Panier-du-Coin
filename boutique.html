@@ -4,37 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Boutique | Le Panier du Coin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-truck"></i> Le facteur passe demain ! Commandez avant 19h pour votre village.</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="contact.html">Besoin d'aide ?</a>
+                <a href="concept.html">Notre démarche solidaire</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="Logo Le Panier du Coin">
+                <span class="brand-name">Le Panier du Coin</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit frais, un artisan...">
+                <button type="button" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='famille.html'">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <div class="action-text">
+                        <span>Compte Famille</span>
+                        <strong>Aider un proche</strong>
+                    </div>
+                </button>
+                <button class="action-btn cart-btn" onclick="window.location.href='panier.html'">
+                    <div class="cart-icon-wrapper">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="cart-badge">0</span>
+                    </div>
+                    <div class="action-text">
+                        <span>Mon Panier</span>
+                        <strong>0,00 €</strong>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container nav-links">
+            <button class="all-categories-btn" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-bars"></i> Tous les rayons</button>
+            <a href="boutique.html" style="color: var(--primary); font-weight: 600;">🥖 Boulangerie</a>
+            <a href="boutique.html">🥩 Boucherie & Charcuterie</a>
+            <a href="boutique.html">🥬 Primeur</a>
+            <a href="boutique.html">🧀 Crèmerie</a>
+            <a href="boutique.html">🍯 Épicerie</a>
+            <a href="concept.html" class="highlight-link"><i class="fa-solid fa-users"></i> Nos Artisans</a>
+        </div>
+    </nav>
+
     <main class="container page-layout">
+        
         <aside class="sidebar-filters">
-            <h3>Nos Rayons</h3>
+            <h3 style="font-size: 1.2rem; margin-bottom: 20px;">Filtres</h3>
             <ul class="filter-list">
-                <li><a href="#" class="active">Tous les produits</a></li>
-                <li><a href="#">🥖 Boulangerie</a></li>
-                <li><a href="#">🥩 Boucherie</a></li>
-                <li><a href="#">🥬 Primeur</a></li>
-                <li><a href="#">🧀 Crèmerie</a></li>
+                <li><a href="#" style="color: var(--secondary); font-weight: 600;">Tous les produits</a></li>
+                <li><a href="#">🥖 Boulangerie (12)</a></li>
+                <li><a href="#">🥩 Boucherie (18)</a></li>
+                <li><a href="#">🥬 Primeur (24)</a></li>
+                <li><a href="#">🧀 Crèmerie (8)</a></li>
+                <li><a href="#">🍯 Épicerie locale (15)</a></li>
+            </ul>
+            
+            <h3 style="font-size: 1.2rem; margin-top: 30px; margin-bottom: 20px;">Labels</h3>
+            <ul class="filter-list">
+                <li><label style="cursor: pointer;"><input type="checkbox" checked style="margin-right: 8px;"> 100% Local</label></li>
+                <li><label style="cursor: pointer;"><input type="checkbox" style="margin-right: 8px;"> Agriculture Biologique</label></li>
+                <li><label style="cursor: pointer;"><input type="checkbox" style="margin-right: 8px;"> Zéro déchet (Consigne)</label></li>
             </ul>
         </aside>
 
-        <section class="products-section full-width">
+        <section class="products-section full-width" style="margin-top: 0;">
             <div class="section-header">
-                <h2>Tous les produits de vos artisans</h2>
+                <h2>Le Marché du Village</h2>
+                <span style="color: var(--text-muted);">Affichage de 8 produits</span>
             </div>
+
             <div class="products-grid">
                 
-                <article class="product-card" data-id="1" data-name="Pain de Campagne Bio" data-price="3.20" data-img="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80">
+                <article class="product-card" data-id="b1" data-name="Pain de Campagne Bio" data-price="3.20" data-img="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400">
                     <div class="product-badge">Local</div>
-                    <div class="product-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80" alt="Pain"></div>
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400" alt="Pain de campagne"></div>
                     <div class="product-details">
-                        <span class="artisan-name">Maison Moulin</span>
-                        <h3 class="product-title">Pain de Campagne Bio</h3>
-                        <span class="product-weight">500g</span>
+                        <span class="artisan-name">Maison Moulin (Boulangerie)</span>
+                        <h3 class="product-title">Pain de Campagne Bio tranché</h3>
+                        <span class="product-weight">Pièce de 500g</span>
                         <div class="product-bottom">
                             <span class="product-price">3,20 €</span>
                             <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
@@ -42,27 +111,53 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-id="2" data-name="Steak haché pur bœuf (x2)" data-price="6.50" data-img="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80">
-                    <div class="product-badge">Circuit-court</div>
-                    <div class="product-image"><img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80" alt="Viande"></div>
+                <article class="product-card" data-id="b2" data-name="Croissants pur beurre (x4)" data-price="4.40" data-img="https://images.unsplash.com/photo-1555507036-ab1f40ce88f4?w=400">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f40ce88f4?w=400" alt="Croissants"></div>
                     <div class="product-details">
-                        <span class="artisan-name">Boucherie Jean</span>
-                        <h3 class="product-title">Steak haché pur bœuf (x2)</h3>
-                        <span class="product-weight">300g</span>
+                        <span class="artisan-name">Maison Moulin (Boulangerie)</span>
+                        <h3 class="product-title">Croissants artisanaux (x4)</h3>
+                        <span class="product-weight">Pur beurre AOP</span>
                         <div class="product-bottom">
-                            <span class="product-price">6,50 €</span>
+                            <span class="product-price">4,40 €</span>
                             <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </article>
 
-                <article class="product-card" data-id="3" data-name="Tomates grappes" data-price="4.50" data-img="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80">
-                    <div class="product-badge bio">Bio</div>
-                    <div class="product-image"><img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80" alt="Tomates"></div>
+                <article class="product-card" data-id="b3" data-name="Poulet fermier Label Rouge" data-price="15.90" data-img="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?w=400">
+                    <div class="product-badge">Plein air</div>
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?w=400" alt="Poulet rôti cru"></div>
                     <div class="product-details">
-                        <span class="artisan-name">Ferme des Lilas</span>
+                        <span class="artisan-name">Boucherie Jean</span>
+                        <h3 class="product-title">Poulet fermier entier</h3>
+                        <span class="product-weight">Environ 1.4 kg</span>
+                        <div class="product-bottom">
+                            <span class="product-price">15,90 €</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="b4" data-name="Saucisses de Toulouse (x4)" data-price="7.20" data-img="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=400" alt="Saucisses"></div>
+                    <div class="product-details">
+                        <span class="artisan-name">Boucherie Jean</span>
+                        <h3 class="product-title">Saucisses de porc fermier (x4)</h3>
+                        <span class="product-weight">Environ 500g</span>
+                        <div class="product-bottom">
+                            <span class="product-price">7,20 €</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="b5" data-name="Tomates grappes" data-price="4.50" data-img="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400">
+                    <div class="product-badge bio">Bio</div>
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400" alt="Tomates"></div>
+                    <div class="product-details">
+                        <span class="artisan-name">La Ferme des Lilas</span>
                         <h3 class="product-title">Tomates grappes de saison</h3>
-                        <span class="product-weight">1kg</span>
+                        <span class="product-weight">Le kilo</span>
                         <div class="product-bottom">
                             <span class="product-price">4,50 €</span>
                             <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
@@ -70,21 +165,89 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-id="4" data-name="Fromage de Chèvre Fermier" data-price="5.20" data-img="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&q=80">
-                    <div class="product-image"><img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&q=80" alt="Fromage"></div>
+                <article class="product-card" data-id="b6" data-name="Pommes Gala locales" data-price="3.80" data-img="https://images.unsplash.com/photo-1560806887-1e4cd0b6faa6?w=400">
+                    <div class="product-badge bio">Bio</div>
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6faa6?w=400" alt="Pommes"></div>
                     <div class="product-details">
-                        <span class="artisan-name">Laiterie du Bourg</span>
-                        <h3 class="product-title">Fromage de Chèvre Cendré</h3>
-                        <span class="product-weight">Pièce de 200g</span>
+                        <span class="artisan-name">Le Verger de Paul</span>
+                        <h3 class="product-title">Pommes Gala croquantes</h3>
+                        <span class="product-weight">Filet de 1kg</span>
                         <div class="product-bottom">
-                            <span class="product-price">5,20 €</span>
+                            <span class="product-price">3,80 €</span>
                             <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </article>
+
+                <article class="product-card" data-id="b7" data-name="Fromage de Chèvre Cendré" data-price="5.50" data-img="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400" alt="Fromage de chèvre"></div>
+                    <div class="product-details">
+                        <span class="artisan-name">Laiterie du Bourg</span>
+                        <h3 class="product-title">Fromage de Chèvre Cendré</h3>
+                        <span class="product-weight">Pièce entière</span>
+                        <div class="product-bottom">
+                            <span class="product-price">5,50 €</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="b8" data-name="Confiture d'Abricots" data-price="6.90" data-img="https://images.unsplash.com/photo-1589585646193-47a3e75e53e3?w=400">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1589585646193-47a3e75e53e3?w=400" alt="Confiture"></div>
+                    <div class="product-details">
+                        <span class="artisan-name">Les Douceurs d'Anne</span>
+                        <h3 class="product-title">Confiture Abricots & Romarin</h3>
+                        <span class="product-weight">Pot en verre consigné (300g)</span>
+                        <div class="product-bottom">
+                            <span class="product-price">6,90 €</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </section>
     </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="logo.png" alt="Logo Le Panier du Coin" class="footer-logo">
+                <p>Bien manger, bien entouré. Vos artisans locaux livrés chez vous.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Nos Rayons</h4>
+                <ul>
+                    <li><a href="boutique.html">Boulangerie</a></li>
+                    <li><a href="boutique.html">Boucherie</a></li>
+                    <li><a href="boutique.html">Fruits & Légumes</a></li>
+                    <li><a href="boutique.html">Épicerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Le Service</h4>
+                <ul>
+                    <li><a href="famille.html">L'Espace Famille</a></li>
+                    <li><a href="concept.html">Notre démarche</a></li>
+                    <li><a href="concept.html">Zéro Déchet</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Aide & Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                    <li><a href="#">CGV & Mentions légales</a></li>
+                    <div class="payment-methods" style="margin-top: 15px; font-size: 1.5rem; display: flex; gap: 10px;">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
+            &copy; 2026 Le Panier du Coin. Fait avec passion pour nos villages.
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
