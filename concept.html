@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Démarche | Le Panier du Coin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-truck"></i> Le facteur passe demain ! Commandez avant 19h pour votre village.</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="contact.html">Besoin d'aide ?</a>
+                <a href="concept.html" style="color: var(--white); font-weight: 600;">Notre démarche solidaire</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="Logo Le Panier du Coin">
+                <span class="brand-name">Le Panier du Coin</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit frais, un artisan...">
+                <button type="button" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='famille.html'">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <div class="action-text">
+                        <span>Compte Famille</span>
+                        <strong>Aider un proche</strong>
+                    </div>
+                </button>
+                <button class="action-btn cart-btn" onclick="window.location.href='panier.html'">
+                    <div class="cart-icon-wrapper">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="cart-badge">0</span>
+                    </div>
+                    <div class="action-text">
+                        <span>Mon Panier</span>
+                        <strong>0,00 €</strong>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container nav-links">
+            <button class="all-categories-btn" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-bars"></i> Tous les rayons</button>
+            <a href="boutique.html">🥖 Boulangerie</a>
+            <a href="boutique.html">🥩 Boucherie & Charcuterie</a>
+            <a href="boutique.html">🥬 Primeur</a>
+            <a href="boutique.html">🧀 Crèmerie</a>
+            <a href="boutique.html">🍯 Épicerie</a>
+            <a href="concept.html" class="highlight-link" style="background-color: var(--secondary); color: white !important;"><i class="fa-solid fa-users"></i> Nos Artisans</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-banner container" style="background-image: linear-gradient(rgba(44, 94, 79, 0.8), rgba(44, 94, 79, 0.6)), url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop'); min-height: 400px;">
+            <div class="banner-content" style="max-width: 800px; text-align: center; margin: 0 auto;">
+                <span class="banner-tag">Notre Mission</span>
+                <h1 style="font-size: 3rem;">Recréer la vie au cœur de nos villages.</h1>
+                <p style="margin: 0 auto 30px auto;">Face à la disparition des petits commerces et à l'isolement de nos aînés, Le Panier du Coin propose une solution simple, humaine et durable.</p>
+            </div>
+        </section>
+
+        <section class="container" style="margin: 80px auto; display: flex; gap: 60px; align-items: center;">
+            <div style="flex: 1;">
+                <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 20px;">Le constat est simple.</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 15px; line-height: 1.8;">
+                    Dans de nombreuses communes rurales, la boulangerie, la boucherie ou l'épicerie ont fermé leurs portes. Pour s'approvisionner en produits frais, il faut prendre la voiture. Mais comment faire quand on ne conduit plus ? 
+                </p>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.8;">
+                    <strong>Notre service hybride est la réponse.</strong> Nous mettons la technologie (notre plateforme) au service de l'humain (notre logistique de tournée) pour livrer directement à domicile les meilleurs produits des artisans des bourgs voisins.
+                </p>
+                <button class="btn-primary" onclick="window.location.href='boutique.html'">Soutenir les artisans locaux</button>
+            </div>
+            <div style="flex: 1; position: relative;">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?w=600&q=80" alt="Personne âgée souriante" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                <div style="position: absolute; bottom: -20px; left: -20px; background: white; padding: 20px; border-radius: 12px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 15px;">
+                    <i class="fa-solid fa-house-chimney-medical" style="font-size: 2rem; color: var(--secondary);"></i>
+                    <div>
+                        <strong style="display: block; color: var(--primary);">Maintien à domicile</strong>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">Une aide précieuse au quotidien</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--bg-light); padding: 80px 0; margin: 80px 0;">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 style="font-size: 2.5rem; color: var(--primary);">Nos engagements durables</h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 15px auto 0;">Un modèle pensé pour protéger la planète, dynamiser l'économie locale et tisser des liens sociaux.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                    <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-sm); text-align: center;">
+                        <div style="height: 70px; width: 70px; background: rgba(214, 138, 94, 0.1); color: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px;">
+                            <i class="fa-solid fa-people-arrows"></i>
+                        </div>
+                        <h3 style="color: var(--primary); margin-bottom: 15px;">Impact Social Fort</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Nous favorisons le maintien à domicile des personnes âgées, brisons la fracture numérique avec notre "Compte Famille" et assurons un soutien économique direct aux petits artisans locaux.</p>
+                    </div>
+
+                    <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-sm); text-align: center;">
+                        <div style="height: 70px; width: 70px; background: rgba(44, 94, 79, 0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px;">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 style="color: var(--primary); margin-bottom: 15px;">Empreinte Carbone Réduite</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Au lieu que 15 habitants prennent leur voiture, notre camionnette électrique fait une tournée mutualisée. De plus, nous livrons dans des glacières et sacs en tissu 100% consignés.</p>
+                    </div>
+
+                    <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-sm); text-align: center;">
+                        <div style="height: 70px; width: 70px; background: rgba(230, 193, 118, 0.2); color: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px;">
+                            <i class="fa-solid fa-trash-can-arrow-up"></i>
+                        </div>
+                        <h3 style="color: var(--primary); margin-bottom: 15px;">Zéro Gaspillage</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Notre fonctionnement repose sur la précommande. En commandant la veille pour le lendemain, l'artisan produit exactement ce qui est vendu. Résultat : zéro invendu !</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="margin: 80px auto; padding-bottom: 40px;">
+            <div style="background: var(--primary-dark); border-radius: 24px; padding: 60px; color: white; display: flex; gap: 50px; align-items: center; overflow: hidden; position: relative;">
+                
+                <div style="flex: 1; z-index: 2;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--accent);">Le temps d'échange garanti.</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 20px; color: rgba(255,255,255,0.9); line-height: 1.7;">
+                        Connaissez-vous la figure historique du facteur de village ? Celui qui apporte un service essentiel, qu'il pleuve ou qu'il vente, prend le temps de discuter sur le pas de la porte et vérifie que tout va bien chez les plus isolés.
+                    </p>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px; color: rgba(255,255,255,0.9); line-height: 1.7;">
+                        <strong>C'est exactement l'âme de notre logistique.</strong> Nos livreurs ne font pas de "livraison express en 15 minutes". Ils font des tournées régulières, à jours fixes, et sont rémunérés pour prendre le temps de vous saluer. Ils deviennent une vigie bienveillante pour le village.
+                    </p>
+                    <button class="btn-primary" style="background-color: var(--accent); color: var(--primary-dark);" onclick="window.location.href='famille.html'">Découvrir l'Espace Famille</button>
+                </div>
+                
+                <div style="flex: 1; text-align: center; z-index: 2;">
+                    <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=600&q=80" alt="Livreur souriant discutant" style="border-radius: 12px; width: 100%; height: 400px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                </div>
+
+                <i class="fa-regular fa-envelope" style="position: absolute; font-size: 25rem; color: rgba(255,255,255,0.03); top: -50px; right: -50px; transform: rotate(-15deg); z-index: 1;"></i>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="logo.png" alt="Logo Le Panier du Coin" class="footer-logo">
+                <p>Bien manger, bien entouré. Vos artisans locaux livrés chez vous.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Nos Rayons</h4>
+                <ul>
+                    <li><a href="boutique.html">Boulangerie</a></li>
+                    <li><a href="boutique.html">Boucherie</a></li>
+                    <li><a href="boutique.html">Fruits & Légumes</a></li>
+                    <li><a href="boutique.html">Épicerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Le Service</h4>
+                <ul>
+                    <li><a href="famille.html">L'Espace Famille</a></li>
+                    <li><a href="concept.html">Notre démarche</a></li>
+                    <li><a href="concept.html">Zéro Déchet</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Aide & Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                    <li><a href="#">CGV & Mentions légales</a></li>
+                    <div class="payment-methods" style="margin-top: 15px; font-size: 1.5rem; display: flex; gap: 10px;">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
+            &copy; 2026 Le Panier du Coin. Fait avec passion pour nos villages.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
