@@ -5,66 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Panier du Coin | Bien manger, bien entouré</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">🧺 Le Panier du Coin</div>
-            <ul>
-                <li><a href="#concept">Concept</a></li>
-                <li><a href="#artisans">Nos Artisans</a></li>
-                <li><a href="#famille">Espace Famille</a></li>
-                <li><a href="#" class="btn-primary">Commander</a></li>
-            </ul>
-        </nav>
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="#" class="brand">
+                <img src="logo.png" alt="Logo Le Panier du Coin" class="logo-img">
+                <div class="brand-text">
+                    <span class="brand-title">Le Panier du Coin</span>
+                    <span class="brand-subtitle">Vos artisans livrés chez vous</span>
+                </div>
+            </a>
+            
+            <nav class="main-nav">
+                <a href="#concept">Le Concept</a>
+                <a href="#boutique">La Boutique</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn-outline" id="btn-famille">Compte Famille</button>
+                <button class="btn-cart" id="btn-panier">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>Bien manger, <br><span>bien entouré.</span></h1>
-            <p>Vos artisans locaux livrés chez vous, avec le sourire et un moment de partage.</p>
-            <div class="cta-group">
-                <a href="#commander" class="btn-main">Faire mon panier</a>
-                <a href="#famille" class="btn-sec">Aider un proche</a>
+        <div class="container hero-content">
+            <span class="badge">Lien social & Circuits courts</span>
+            <h1>Bien manger, <br><span class="highlight">bien entouré.</span></h1>
+            <p>Pain frais, viande de qualité, fruits locaux... Commandez chez vos artisans du village et soyez livré avec le sourire. Un vrai moment d'échange à chaque passage.</p>
+            <div class="hero-buttons">
+                <a href="#boutique" class="btn-primary">Remplir mon panier</a>
+                <a href="#concept" class="btn-text">Découvrir le service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="concept" class="features">
-        <h2>Pourquoi nous choisir ?</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-store"></i>
-                <h3>Multi-Artisans</h3>
-                <p>Pain, viande, fruits : un seul panier unique pour tous vos commerçants du village.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-users"></i>
-                <h3>Lien Social</h3>
-                <p>Nos livreurs prennent le temps de discuter. Un passage régulier qui rassure.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-leaf"></i>
-                <h3>Zéro Déchet</h3>
-                <p>Des contenants consignés et des tournées optimisées pour préserver notre campagne.</p>
+    <section id="concept" class="concept-section">
+        <div class="container">
+            <h2 class="section-title">Pourquoi nous choisir ?</h2>
+            <div class="grid-3">
+                <div class="card-feature">
+                    <div class="icon-wrapper"><i class="fa-solid fa-store"></i></div>
+                    <h3>Panier Multi-Artisans</h3>
+                    <p>Boulanger, boucher, maraîcher : un seul paiement, une seule livraison pour tout le village.</p>
+                </div>
+                <div class="card-feature">
+                    <div class="icon-wrapper"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <h3>Tournée Régulière</h3>
+                    <p>Des passages fixes et un temps d'échange garanti pour briser la solitude de nos aînés.</p>
+                </div>
+                <div class="card-feature">
+                    <div class="icon-wrapper"><i class="fa-solid fa-recycle"></i></div>
+                    <h3>Zéro Déchet</h3>
+                    <p>Des contenants consignés récupérés à la livraison suivante. C'est bon pour la nature.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="famille" class="family-space">
-        <div class="content">
+    <section id="boutique" class="shop-section">
+        <div class="container">
+            <h2 class="section-title">Aujourd'hui au village</h2>
+            <div class="grid-3">
+                <div class="card-product">
+                    <div class="product-img" style="background-color: #f0e6d2;">🍞</div>
+                    <div class="product-info">
+                        <span class="artisan-name">Boulangerie Moulin</span>
+                        <h3>Pain de Campagne (500g)</h3>
+                        <div class="product-bottom">
+                            <span class="price">2.50 €</span>
+                            <button class="btn-add-cart" onclick="addToCart()">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-product">
+                    <div class="product-img" style="background-color: #fce4e4;">🥩</div>
+                    <div class="product-info">
+                        <span class="artisan-name">Boucherie Jean</span>
+                        <h3>Rôti de Porc local (800g)</h3>
+                        <div class="product-bottom">
+                            <span class="price">14.90 €</span>
+                            <button class="btn-add-cart" onclick="addToCart()">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-product">
+                    <div class="product-img" style="background-color: #e8f5e9;">🥕</div>
+                    <div class="product-info">
+                        <span class="artisan-name">Ferme des Lilas</span>
+                        <h3>Panier Légumes de Saison</h3>
+                        <div class="product-bottom">
+                            <span class="price">12.00 €</span>
+                            <button class="btn-add-cart" onclick="addToCart()">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-famille" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
             <h2>L'Espace Famille</h2>
-            <p>Vous habitez loin de vos parents ? Gérez leurs commandes en quelques clics. Nous assurons la livraison et vous recevez une notification dès que la visite est terminée.</p>
-            <button class="btn-white">Créer un compte délégué</button>
+            <p>Gérez les courses de vos parents à distance, réglez en ligne et recevez une notification rassurante une fois la livraison effectuée par notre livreur.</p>
+            <form class="form-famille" onsubmit="event.preventDefault(); alert('Inscription envoyée !');">
+                <input type="email" placeholder="Votre adresse e-mail" required>
+                <button type="submit" class="btn-primary">Créer mon compte délégué</button>
+            </form>
         </div>
-    </section>
+    </div>
+
+    <div id="toast" class="toast">Produit ajouté au panier du coin ! 🧺</div>
 
     <footer>
-        <p>&copy; 2026 Le Panier du Coin - Vos artisans locaux à domicile.</p>
+        <div class="container">
+            <p>&copy; 2026 Le Panier du Coin - Bien manger, bien entouré.</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
