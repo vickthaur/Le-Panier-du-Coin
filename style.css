@@ -71,6 +71,22 @@ button { font-family: inherit; border: none; cursor: pointer; transition: var(--
     box-shadow: 0 6px 15px rgba(44, 94, 79, 0.2);
 }
 
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    transition: var(--transition);
+}
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
 /* --- TOP BAR (BARRE UTILITE SUPERIEURE) --- */
 .top-bar {
     background-color: var(--primary-dark);
@@ -214,8 +230,8 @@ button { font-family: inherit; border: none; cursor: pointer; transition: var(--
 /* --- HERO BANNER (STYLE PROMOTION) --- */
 .hero-banner {
     margin: 40px auto;
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1543168256-4154204e3ab3?w=1600&q=80');
-    background-size: cover; background-position: center;
+    background-size: cover; 
+    background-position: center;
     border-radius: 20px;
     padding: 80px 60px;
     color: var(--white);
@@ -338,6 +354,7 @@ button { font-family: inherit; border: none; cursor: pointer; transition: var(--
     .hero-banner { padding: 50px 30px; }
     .hero h1 { font-size: 2.8rem; }
 }
+
 /* --- STYLES DES NOUVELLES PAGES --- */
 
 /* Layout Boutique */
@@ -369,3 +386,29 @@ button { font-family: inherit; border: none; cursor: pointer; transition: var(--
 
 /* Message panier vide */
 .empty-cart { text-align: center; padding: 50px; color: var(--text-muted); font-size: 1.2rem; background: white; border-radius: 12px; border: 1px dashed var(--border-color); }
+
+/* --- TOAST NOTIFICATION (Généré par JS) --- */
+.toast-notification {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%) translateY(20px);
+    box-shadow: var(--shadow-lg);
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-notification.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
