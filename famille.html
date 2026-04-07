@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Espace Famille | Le Panier du Coin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-truck"></i> Le facteur passe demain ! Commandez avant 19h pour votre village.</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="contact.html">Besoin d'aide ?</a>
+                <a href="concept.html">Notre démarche solidaire</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="Logo Le Panier du Coin">
+                <span class="brand-name">Le Panier du Coin</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher un produit frais, un artisan...">
+                <button type="button" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="user-actions">
+                <button class="action-btn" onclick="window.location.href='famille.html'" style="background-color: rgba(214, 138, 94, 0.1); border: 1px solid var(--secondary);">
+                    <i class="fa-solid fa-hand-holding-heart" style="color: var(--secondary);"></i>
+                    <div class="action-text">
+                        <span style="color: var(--secondary);">Compte Famille</span>
+                        <strong style="color: var(--secondary);">Mon Espace</strong>
+                    </div>
+                </button>
+                <button class="action-btn cart-btn" onclick="window.location.href='panier.html'">
+                    <div class="cart-icon-wrapper">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="cart-badge">0</span>
+                    </div>
+                    <div class="action-text">
+                        <span>Mon Panier</span>
+                        <strong>0,00 €</strong>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container nav-links">
+            <button class="all-categories-btn" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-bars"></i> Tous les rayons</button>
+            <a href="boutique.html">🥖 Boulangerie</a>
+            <a href="boutique.html">🥩 Boucherie & Charcuterie</a>
+            <a href="boutique.html">🥬 Primeur</a>
+            <a href="boutique.html">🧀 Crèmerie</a>
+            <a href="boutique.html">🍯 Épicerie</a>
+            <a href="concept.html" class="highlight-link"><i class="fa-solid fa-users"></i> Nos Artisans</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-banner container" style="background-image: linear-gradient(to right, rgba(44, 94, 79, 0.95) 0%, rgba(44, 94, 79, 0.4) 100%), url('https://images.unsplash.com/photo-1581579438747-104c54099714?q=80&w=1600&auto=format&fit=crop'); min-height: 450px; display: flex; align-items: center;">
+            <div class="banner-content" style="max-width: 600px; margin: 0;">
+                <span class="banner-tag" style="background-color: var(--secondary); color: white;">Pour les proches</span>
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Prenez soin d'eux,<br>même à distance.</h1>
+                <p style="font-size: 1.15rem; margin-bottom: 30px; line-height: 1.6;">L'Espace Famille vous permet de gérer les commandes de vos parents âgés. Assurez-vous qu'ils mangent bien et profitez d'une tranquillité d'esprit totale grâce à nos livreurs bienveillants.</p>
+                <a href="#creation-compte" class="btn-primary" style="background-color: var(--white); color: var(--primary); font-size: 1.1rem; padding: 16px 35px;">Créer un compte délégué</a>
+            </div>
+        </section>
+
+        <section style="padding: 80px 0; background-color: var(--white);">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 style="font-size: 2.5rem; color: var(--primary);">Une solution simple et rassurante</h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 15px auto 0;">Contournez la fracture numérique : vous gérez la technique, nous gérons l'humain.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
+                    <div style="padding: 30px; border: 1px solid var(--border-color); border-radius: 16px; position: relative;">
+                        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--secondary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">1</div>
+                        <i class="fa-solid fa-mobile-screen" style="font-size: 2.5rem; color: var(--primary); margin: 20px 0 15px;"></i>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Vous commandez</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Composez le panier unique avec les artisans du village depuis votre ordinateur ou smartphone et réglez en ligne.</p>
+                    </div>
+
+                    <div style="padding: 30px; border: 1px solid var(--border-color); border-radius: 16px; position: relative;">
+                        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--secondary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">2</div>
+                        <i class="fa-solid fa-basket-shopping" style="font-size: 2.5rem; color: var(--primary); margin: 20px 0 15px;"></i>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Nous préparons</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Les artisans locaux préparent les produits frais. Le tout est rassemblé dans nos contenants consignés écologiques.</p>
+                    </div>
+
+                    <div style="padding: 30px; border: 1px solid var(--border-color); border-radius: 16px; position: relative;">
+                        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--secondary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">3</div>
+                        <i class="fa-solid fa-handshake-angle" style="font-size: 2.5rem; color: var(--primary); margin: 20px 0 15px;"></i>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Le lien humain</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Notre livreur apporte la commande à domicile lors de sa tournée régulière et prend le temps d'échanger avec votre proche.</p>
+                    </div>
+
+                    <div style="padding: 30px; border: 1px solid var(--border-color); border-radius: 16px; position: relative; background: rgba(44, 94, 79, 0.05); border-color: var(--primary-light);">
+                        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">4</div>
+                        <i class="fa-solid fa-bell" style="font-size: 2.5rem; color: var(--primary); margin: 20px 0 15px;"></i>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem; color: var(--primary);">Vous êtes rassuré</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Dès la livraison effectuée, vous recevez un SMS ou un e-mail de confirmation. Vous savez que tout va bien.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="creation-compte" style="padding: 80px 0; background-color: var(--bg-light);">
+            <div class="container" style="display: flex; gap: 60px; align-items: flex-start; justify-content: center;">
+                
+                <div style="flex: 1; max-width: 500px;">
+                    <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 20px;">Ouvrez votre Espace Famille</h2>
+                    <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px;">Créez votre compte dès maintenant. Vous pourrez ensuite ajouter l'adresse de votre proche, configurer ses préférences alimentaires et passer votre première commande mutualisée.</p>
+                    
+                    <ul style="list-style: none; margin-bottom: 40px;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;"><i class="fa-solid fa-check" style="color: var(--primary); background: rgba(44, 94, 79, 0.1); padding: 8px; border-radius: 50%;"></i> Sans engagement</li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;"><i class="fa-solid fa-check" style="color: var(--primary); background: rgba(44, 94, 79, 0.1); padding: 8px; border-radius: 50%;"></i> Paiement 100% sécurisé</li>
+                        <li style="display: flex; align-items: center; gap: 15px;"><i class="fa-solid fa-check" style="color: var(--primary); background: rgba(44, 94, 79, 0.1); padding: 8px; border-radius: 50%;"></i> Facturation centralisée</li>
+                    </ul>
+                </div>
+
+                <div style="flex: 1; max-width: 500px; background: white; padding: 40px; border-radius: 24px; box-shadow: var(--shadow-lg);">
+                    <form onsubmit="event.preventDefault(); alert('Votre Espace Famille est en cours de création. Bienvenue !');">
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-main);">Votre Prénom</label>
+                            <input type="text" required placeholder="Ex: Claire" style="width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 12px; font-family: inherit; font-size: 1rem; outline: none;">
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-main);">Votre Email</label>
+                            <input type="email" required placeholder="claire@exemple.com" style="width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 12px; font-family: inherit; font-size: 1rem; outline: none;">
+                        </div>
+
+                        <div style="margin-bottom: 30px;">
+                            <label style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-main);">Code Postal de votre proche à livrer</label>
+                            <input type="text" required placeholder="Ex: 69400" style="width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 12px; font-family: inherit; font-size: 1rem; outline: none;">
+                            <span style="font-size: 0.8rem; color: var(--text-muted); display: block; margin-top: 5px;">Nous vérifierons si sa commune fait partie de nos tournées actuelles.</span>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; font-size: 1.1rem; padding: 16px;">Créer mon compte</button>
+                        
+                        <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                            Déjà inscrit ? <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: underline;">Se connecter</a>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <img src="logo.png" alt="Logo Le Panier du Coin" class="footer-logo">
+                <p>Bien manger, bien entouré. Vos artisans locaux livrés chez vous.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Nos Rayons</h4>
+                <ul>
+                    <li><a href="boutique.html">Boulangerie</a></li>
+                    <li><a href="boutique.html">Boucherie</a></li>
+                    <li><a href="boutique.html">Fruits & Légumes</a></li>
+                    <li><a href="boutique.html">Épicerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Le Service</h4>
+                <ul>
+                    <li><a href="famille.html">L'Espace Famille</a></li>
+                    <li><a href="concept.html">Notre démarche</a></li>
+                    <li><a href="concept.html">Zéro Déchet</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Aide & Contact</h4>
+                <ul>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                    <li><a href="#">CGV & Mentions légales</a></li>
+                    <div class="payment-methods" style="margin-top: 15px; font-size: 1.5rem; display: flex; gap: 10px;">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="container" style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem;">
+            &copy; 2026 Le Panier du Coin. Fait avec passion pour nos villages.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
