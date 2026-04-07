@@ -24,7 +24,7 @@
 
     <header class="main-header">
         <div class="container header-content">
-            <a href="/" class="brand-logo">
+            <a href="index.html" class="brand-logo">
                 <img src="logo.png" alt="Logo Le Panier du Coin">
                 <span class="brand-name">Le Panier du Coin</span>
             </a>
@@ -42,7 +42,7 @@
                         <strong>Se connecter</strong>
                     </div>
                 </button>
-                <button class="action-btn cart-btn">
+                <button class="action-btn cart-btn" onclick="window.location.href='panier.html'">
                     <div class="cart-icon-wrapper">
                         <i class="fa-solid fa-basket-shopping"></i>
                         <span class="cart-badge">0</span>
@@ -58,12 +58,12 @@
 
     <nav class="category-nav">
         <div class="container nav-links">
-            <button class="all-categories-btn"><i class="fa-solid fa-bars"></i> Tous nos rayons</button>
-            <a href="#">🥖 Boulangerie</a>
-            <a href="#">🥩 Boucherie & Charcuterie</a>
-            <a href="#">🥬 Fruits & Légumes</a>
-            <a href="#">🧀 Crèmerie</a>
-            <a href="#">🍯 Épicerie locale</a>
+            <button class="all-categories-btn" onclick="window.location.href='boutique.html'"><i class="fa-solid fa-bars"></i> Tous nos rayons</button>
+            <a href="boutique.html">🥖 Boulangerie</a>
+            <a href="boutique.html">🥩 Boucherie & Charcuterie</a>
+            <a href="boutique.html">🥬 Fruits & Légumes</a>
+            <a href="boutique.html">🧀 Crèmerie</a>
+            <a href="boutique.html">🍯 Épicerie locale</a>
             <a href="#" class="highlight-link"><i class="fa-solid fa-star"></i> Nos Artisans</a>
         </div>
     </nav>
@@ -74,7 +74,7 @@
                 <span class="banner-tag">Solidaire & Local</span>
                 <h1>Soutenez les artisans<br>de votre région.</h1>
                 <p>Vos courses complètes issues du circuit court, livrées en une seule fois avec le sourire de notre livreur.</p>
-                <button class="btn-primary">Voir les produits de saison</button>
+                <button class="btn-primary" onclick="window.location.href='boutique.html'">Voir les produits de saison</button>
             </div>
         </section>
 
@@ -112,11 +112,11 @@
         <section class="products-section container">
             <div class="section-header">
                 <h2>Les indispensables de la semaine</h2>
-                <a href="#" class="view-all">Voir tout <i class="fa-solid fa-chevron-right"></i></a>
+                <a href="boutique.html" class="view-all">Voir tout <i class="fa-solid fa-chevron-right"></i></a>
             </div>
 
             <div class="products-grid">
-                <article class="product-card">
+                <article class="product-card" data-id="home-1" data-name="Pain de Campagne Bio tranché" data-price="3.20" data-img="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80">
                     <div class="product-badge">Local</div>
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80" alt="Pain de campagne">
@@ -132,7 +132,7 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card" data-id="home-2" data-name="Steak haché pur bœuf (x2)" data-price="6.50" data-img="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80">
                     <div class="product-badge">Circuit-court</div>
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80" alt="Viande hachée">
@@ -148,7 +148,7 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card" data-id="home-3" data-name="Carottes fanes de saison" data-price="2.90" data-img="https://images.unsplash.com/photo-1518977672816-25f1b5cd2181?w=400&q=80">
                     <div class="product-badge bio">Bio</div>
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1518977672816-25f1b5cd2181?w=400&q=80" alt="Carottes">
@@ -164,7 +164,7 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card" data-id="home-4" data-name="Miel de fleurs d'été" data-price="8.50" data-img="https://images.unsplash.com/photo-1628198602644-fb88bb3e852d?w=400&q=80">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1628198602644-fb88bb3e852d?w=400&q=80" alt="Miel">
                     </div>
@@ -191,10 +191,10 @@
             <div class="footer-col">
                 <h4>Nos Rayons</h4>
                 <ul>
-                    <li><a href="#">Boulangerie</a></li>
-                    <li><a href="#">Boucherie</a></li>
-                    <li><a href="#">Fruits & Légumes</a></li>
-                    <li><a href="#">Épicerie</a></li>
+                    <li><a href="boutique.html">Boulangerie</a></li>
+                    <li><a href="boutique.html">Boucherie</a></li>
+                    <li><a href="boutique.html">Fruits & Légumes</a></li>
+                    <li><a href="boutique.html">Épicerie</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -222,5 +222,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
